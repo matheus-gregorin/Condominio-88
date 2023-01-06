@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+*{
+    border: 0;
+    margin: 0;
+    background-color: #aaaa91;
+}
+
+.content {
+   width: 100%;
+   height: 47.4em;
+   background-color: #aaaa91;
+   display: flex;
+   flex-direction: row;
+}
+
+.header{
+   background-color: #12122b;
+   height: 105%;
+   width: 35%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-family: 'Caveat', cursive;
+   font-size: 12px;
+}
+
+.header #moveMenu {
+    background-color: #12122b;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header #moveMenu a {
+    outline: none;
+    text-decoration: none;
+    background-color: #12122b;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.ImMenu {
+    background-color: #12122b;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.conteudo {
+    width: 100%;
+    height: 49.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.MsgBemVindo{
+    font-size: 15px;
+    font-family: 'Caveat', cursive;
+    color: #12122b;
+    margin-bottom: 20px;
+}
+
+.MsgAgend{
+    font-size: 13px;
+    font-family: 'Caveat', cursive;
+    color: #12122b;
+}
+
+
+/* Paleta de cores 
+
+#aaaa91;
+#848478;
+#5e5e5e;
+#383845;
+#12122b;
+
+*/

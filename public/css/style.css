@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+*{
+    border: 0;
+    margin: 0;
+    background-color: #aaaa91;
+}
+
+.content {
+    height: 47.5em;
+    width: 100%;
+    background-color: #aaaa91;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #12122b;
+}
+
+.content h2{
+    margin-bottom: 15px;
+    font-size: 35px;
+    font-family: 'Caveat', cursive;
+} 
+
+.container {
+    width: 80%;
+    height: 33em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .subtitle {
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-family: 'Caveat', cursive;
+}
+
+.login {
+    width: 90%;
+    height: 22em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login h3 {
+    font-size: 25px;
+    font-family: 'Caveat', cursive;
+}
+
+.emailInp {
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px 0px 15px 0px;
+    background-color: #12122b;
+    color: white;
+}
+
+.senhaInp {
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px 0px 15px 0px;
+    background-color: #12122b;
+    color: white;
+}
+
+.entrarBut {
+    width: 10em;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 20px 0px 20px 0px;
+    cursor: pointer;
+    background-color: #12122b;
+    color: #aaaa91;
+    font-family: 'Caveat', cursive;
+}
+
+.linkCad {
+    font-size: 15px;
+    color: #12122b;
+}
+
+#resp1{
+    font-size: 12px;
+    margin: 0px 0px 25px 0px;
+}
+
+#resp2{
+    font-size: 12px;
+    margin: 0px 0px 25px 0px;
+}
+
+
+
+/* Paleta de cores 
+
+#aaaa91;
+#848478;
+#5e5e5e;
+#383845;
+#12122b;
+
+*/

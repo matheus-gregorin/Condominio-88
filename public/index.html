@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <div class="content" id="content">
+        <h2>Condominio Araroba 88 </h2>
+        <div class="container">
+            <h3 class="subtitle"> Faça seu Login! </h3>
+            <div class="login">
+               <h3> Email: </h3> <input type="text" class="emailInp" id="emailInput" placeholder="Digite seu email aqui...">
+                <span id="resp1"></span>
+               <h3> Senha: </h3> <input type="password" class="senhaInp" id="senhaInput" placeholder="Digite sua senha aqui...">
+                <span id="resp2"></span>
+
+                <button id="entrar" class="entrarBut" onclick="logar()" >Entrar</button>
+
+                <a href="" class="linkCad"> Não possui cadastro? Clique aqui </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+function logar(){
+
+    email = emailInput.value
+    senha = senhaInput.value
+
+    if(email == null || email == "" || email == " "){
+
+        resp1.style.color = "red"
+        resp1.innerHTML = "Email inválido, tente novamente!"
+
+    } else if (senha == null || senha == "" || senha == " "){
+
+        resp2.style.color = "red"
+        resp2.innerHTML = "Senha iválida, tente novamnete"
+
+    }
+
+    fetch("user/login", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+      },
+      
+      body: JSON.stringify({ emailUser: email, senhaUser: senha }),
+
+    })
+    .then(function (resposta){
+     
+        if(resposta.statusText == "OK"){
+
+            resposta.json()
+            .then((json) => {
+
+                alert("Existe conta com esse email e senha")
+
+                sessionStorage.IS_SINDICO = json[0].isSindico;
+
+                return window.location = "home.html";
+
+            })
+
+        } else {
+
+            alert("Não existe conta com esse email e senha")
+
+        }
+
+    }).catch(function (erro){
+
+        console.log(erro)
+
+    })
+
+}
+
+</script>

@@ -1,5 +1,5 @@
 
- // -------------------REQUISIÇÔES--------------------------------------
+ // -------------------REQUISIÇÔES-VARIAVEIS-DE-AMBIENTE----------------
  
  require('dotenv/config');
  var express = require("express");
@@ -9,13 +9,14 @@
  var PORTA = process.env.PORT;
  var AMBIENTE = process.env.AMBIENTE_PROCESSO;
  
- // ------------------SUB-REQUISIÇÔES-----------------------------------
+ // ------------------INDEX-DE-ROTAS-------------------------------------
  
  var app = express();
  var index = require("./src/routes/index");
+ var user = require("./src/routes/user");
+ var agendamento = require("./src/routes/agendamento");
 
  // ------------------MIDDLEWARER----------------------------------------
- 
  
  app.use(express.json());
  app.use(express.urlencoded({ extended: true }));
@@ -30,6 +31,8 @@
  // ------------------ROTAS-PADRÕES--------------------------------------
  
  app.use("/", index);
+ app.use("/user", user);
+ app.use("/agendamento", agendamento);
  
  // ---------------PORTA DO NAVEGADOR------------------------------------
  
